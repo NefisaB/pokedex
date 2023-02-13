@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    
+}
+.App {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+nav {
+    grid-area: 1/1 / 2 /3;
+    height: 10vh;
+    min-height: 70px;
+    display: flex;
+    background-color: rgb(24, 104, 174);
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav > h1 {
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+li {
+    list-style: none;
+}
+
+aside {
+    width: 20vw;
+    min-width: 200px;
+
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 90vh;
+}
+
+aside > h2 {
+    font-size: 1.5rem;
+}
+
+aside > ul {
+    padding-left: 0;
+}
+
+aside > ul > a >li {
+    font-size: 1rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.main {
+    background-color: rgb(198, 218, 236);
+    padding: 10px;
+}
+
+.main > h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.main-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 5px;
+    justify-items: center;
+}
+
+.poke-card {
+    width: 150px;
+    background-color: rgb(110, 147, 180);
+    border-radius: 5px;
+}
+
+.poke-image {
+    max-width: 100%;
+}
+
+.poke-card > h3 {
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
