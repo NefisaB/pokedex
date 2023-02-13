@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Main = () => {
 
@@ -19,19 +19,10 @@ const Main = () => {
         
     }, [genID]);
 
-    const pokemonsList = pokemons && pokemons.map((pokemon, index) => {
-        let id;
-        if (regionName === "kanto") {
-            id = index + 1;
-        } else {
-            id = pokemon.url.slice(42, 45);
-        }
+    const pokemonsList = pokemons && pokemons.map(pokemon => {
         return (
             <div key={pokemon.name} className="poke-card">
-                <h3>{pokemon.name} (#{id})</h3>
-                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
-                    alt={pokemon.name}
-                className="poke-image"/>
+               <Link to={`/pokemon/${pokemon.name}`} > <h3>{pokemon.name}</h3></Link>                
             </div>
         );
     });

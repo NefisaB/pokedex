@@ -77,10 +77,15 @@ aside > ul > a >li {
     justify-items: center;
 }
 
+.card {
+    padding: 20px;
+}
+
 .poke-card {
     width: 150px;
     background-color: rgb(110, 147, 180);
     border-radius: 5px;
+    text-align: center;
 }
 
 .poke-image {
